@@ -1,0 +1,47 @@
+.movieDetailsContainer {
+    width: 100%;
+  }
+  
+  .movieDetails {
+    color: #cec6af;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+ 
+  }
+  .movieDetails span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .movieInfo {
+    color: #cec6af;
+    width: 50%;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 20px;
+  }
+  
+  .releaseDate {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #cec6af;
+    font-weight: 600;
+    padding-left: 20px;
+  }
+  
+  .backgroundImage {
+    height: 100%;
+    width: 100%;
+  }
+
+  .backgroundImage img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    object-fit: fill;
+  }
+  
