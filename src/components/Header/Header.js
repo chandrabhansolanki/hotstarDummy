@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Images/hotstarlogo.svg";
 import "./Header.css";
+import Login from "../Login/Login";
 
 const Header = () => {
+  const [login, setLogin] = useState(false)
+
+ 
+
+  const clickHandler = () => {
+    // alert("hello")
+    setLogin(true)
+  }
   return (
     <nav className="nav-container">
       <Link to="/">
@@ -55,7 +64,8 @@ const Header = () => {
       <div className="rightSide">
         <input className="search" type="text" placeholder="Search" />
         <button className="subscribe-btn">SUBSCRIBE</button>
-        <Link className="login">Login</Link>
+        <Link onClick={clickHandler} className="login">Login</Link>
+        <Login onclose={() => setLogin(false)} login={login}  />
       </div>
     </nav>
   );

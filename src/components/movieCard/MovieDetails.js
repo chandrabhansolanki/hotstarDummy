@@ -10,7 +10,7 @@ const MovieDetails = () => {
   return (
     <div className="movieDetailsContainer">
       <div className="backgroundImage">
-        <img src={backGroundImage} alt="background" />
+        <img src={`https://image.tmdb.org/t/p/original${allCards?.backdrop_path}`} alt="background" />
       </div>
       <div className="movieDetails">
         <h1 style={{ color: "white" }}>{allCards?.original_title || allCards?.original_name}</h1>
