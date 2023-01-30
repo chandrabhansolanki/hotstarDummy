@@ -7,30 +7,61 @@
   width: 100%;
   height: 220px;
   /* border: 2px solid red; */
-  margin: 10px 0px 20px;
+  margin: 10px 0px 20px 0px;
   position: relative;
+
   /* align-items: center;
   justify-content: center; */
 
 }
+.mainContainer .swiper-button-next::after ,.mainContainer .swiper-button-prev::after {
+  font-size: 30px !important;
+  color: #fff;
+  /* width: 50px;
+  height: 50px; */
+  /* background-color: red; */
+}
+
+.mainContainer .swiper-wrapper{
+  /* margin-left: 50px !important; */
+  /* overflow : hidden !important; */
+}
+
+/* .swiper{
+  overflow: visible !important;
+} */
 
 .allCardsContainer{
-  display: flex;
+  /* display: flex;
   width: 92%;
   position: relative;
   padding-left:10px ;
   height: 220px;
   margin: 0 auto;
+  margin-left: 50px !important; */
+  /* margin-bottom: 20px !important; */
   /* justify-content: center;  */
   /* border: 2px solid red; */
   /* scroll-behavior: smooth; */
   /* overflow-x: auto ; */
   /* overflow-y: visible; */
-  
- 
 }
 
 .allCardsContainer::-webkit-scrollbar{
+  display: none;
+}
+
+.mainContainer .swiper{
+  height: 220px !important;
+  padding-left:10px !important;
+  width: 92% !important;
+  overflow-y: visible !important;
+  overflow-x: visible !important;
+  /* overflow-wrap: anywhere !important; */
+  /* width: 100% !important; */
+}
+
+.mainContainer .swiper::-webkit-scrollbar {
   display: none;
 }
 
@@ -38,7 +69,7 @@
   display: flex;
   flex-direction: column;
   min-width: 170px;
-  height: 220px;
+  height: 100%;
   margin-right: 10px;
   overflow: hidden;
   border-radius: 8px;
@@ -49,10 +80,16 @@
   /* scroll-behavior: smooth; */
 }
 
-.container .cardContainer img {
+.container .cardContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.container .cardContainer {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: cover !important;
   border-radius: 8px;
 }
 
@@ -62,7 +99,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover !important;
   color: #fff;
   opacity: 0;
   transition: 0.5s;
@@ -75,15 +112,14 @@
 
 .cardContainer {
   text-decoration: none;
-  object-fit: cover;
-  height: 100%;
+  object-fit: cover !important;
+  height: 100% ;
   width: 100%;
 }
 
 .container:hover {
   transform: scale(1.18);
   z-index: 1;
-
 }
 
 .container:hover .card-data {

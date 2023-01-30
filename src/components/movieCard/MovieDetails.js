@@ -6,7 +6,7 @@ import backGroundImage from "../Images/inception.jpg";
 const MovieDetails = () => {
   const location = useLocation();
   const [allCards, setAllCards] = useState(location?.state);
-  console.log(allCards);
+  // console.log(allCards);
   return (
     <div className="movieDetailsContainer">
       <div className="backgroundImage">

@@ -35,11 +35,11 @@ const MovieSlider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Navigation]}
-        className="mySwiper"
+        className="mySwiper main-slider-container"
       >
         {images.map((item) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide className="slider-container">
               <img src={item.slide} />
             </SwiperSlide>
           )

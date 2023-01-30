@@ -1,10 +1,6 @@
 import React, { useState } from "react"
 import './Login.css'
-import { useEffect } from 'react'
 // import close from '../Images/close.svg'
-import PhoneNumber from "./PhoneNumberModal"
-import OTPModal from "./OTPModal"
-import { Link } from "react-router-dom"
 
 const Login = (props) => {
     const [phoneModal, setPhoneModal] = useState(false)

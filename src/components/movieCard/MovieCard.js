@@ -5,6 +5,11 @@ import movie from "../Images/inception.jpg";
 import MovieSlider from "../Slider/Slider";
 import pre from "../Images/pre.png"
 import next from "../Images/nxt.png"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const MovieCard = () => {
   const [allCards, setAllCards] = useState();
@@ -58,12 +63,19 @@ const MovieCard = () => {
       <MovieSlider />
       <h1 className="title">Latest & Trending</h1>
       <div className="mainContainer">
-        <button className="pre-btn" onClick={() => previousHandler()}><img src={pre} /></button>
-        <button className="nxt-btn" onClick={() => nextHandler()}><img src={next} /></button>
-        <div className="allCardsContainer" style={setSliderStyles()}>
+        {/* <button className="pre-btn" onClick={() => previousHandler()}><img src={pre} /></button>
+        <button className="nxt-btn" onClick={() => nextHandler()}><img src={next} /></button> */}
+        <Swiper slidesPerView={8}
+          navigation={true}
+          modules={[Navigation]}
+          pagination={true} 
+          spaceBetween={12}
+          slidesPerGroup={8}
+          className="allCardsContainer mySwiper"
+         >
           {allCards?.map((item) => {
             return (
-              <div key={item?.episode_id} className="container">
+              <SwiperSlide key={item?.episode_id} className="container">
                 <Link
                   className="cardContainer"
                   to="/details"
@@ -75,11 +87,11 @@ const MovieCard = () => {
                     <h6>{item?.overview}</h6>
                   </div>
                 </Link>
-              </div>
+              </SwiperSlide>
             );
           })}
 
-        </div>
+        </Swiper>
       </div>
     </div>
   );
