@@ -9,7 +9,7 @@ import OTPModal from "../Login/OTPModal";
 const Header = () => {
   const [login, setLogin] = useState()
 
-  console.log(login, "login");
+  // console.log(login, "login");
 
   const clickHandler = (a) => {
     // alert("hello")
